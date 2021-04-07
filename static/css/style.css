@@ -1,2 +1,22 @@
 body {
-    background-color: red;}
+    background: black;
+  }
+
+.navbar-list {
+    float: right;
+    margin-right: 0;
+}
+
+.navbar-list ul li{
+    float: right;
+}
+
+
+/* sign up page */
+
+.sign_up-container{
+    margin:0 auto;
+    margin-top: 20px;
+    width: 100%;
+    background: orange;
+}
