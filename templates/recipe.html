@@ -25,6 +25,24 @@
 
     {% endfor %}
 
+    <!-- return to profile/ recipes -->
+
+    {% if session['user'] == recipe.author %}
+
+    <div class="row">
+        <a href="{{ url_for('profile', username=session['user']) }}" class="col s6 btn-large orange darken-4 text-shadow">
+            Return to Profile</a>
+    </div>
+
+    {% else %}
+
+    <div class="row">
+        <a href="{{ url_for('recipes') }}" class="col s6 btn-large orange darken-4 text-shadow">
+            Return to Recipes</a>
+    </div>
+
+    {% endif %}
+
     
 
 

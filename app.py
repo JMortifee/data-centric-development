@@ -131,6 +131,32 @@ def create_recipe():
 
     return render_template("create_recipe.html")
 
+@app.route("/edit_recipe/<username>/<recipe_name>", methods=["GET", "POST"])
+def edit_recipe(username, recipe_name):
+
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    recipe_name = mongo.db.recipes.find_one(
+        {"recipe_name": recipe_name }
+    )
+
+    if request.method == "POST":
+        
+        edited_recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "ingredients": [request.form.get("ingredient1"),request.form.get("ingredient2"),request.form.get("ingredient3"),request.form.get("ingredient4"),request.form.get("ingredient5"),request.form.get("ingredient6"),request.form.get("ingredient7")],
+            "method": [request.form.get("step1"),request.form.get("step2"),request.form.get("step3"),request.form.get("step4"),request.form.get("step5"),request.form.get("step6"),request.form.get("step7")],
+            "author": session["user"]
+        }
+        mongo.db.recipes.update(recipe_name, edited_recipe)
+        flash("Recipe Successfully Edited")
+        return redirect(url_for("profile", username=session["user"]))
+
+
+    return render_template("edit_recipe.html", username=username, recipe_name=recipe_name)
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -5,13 +5,13 @@
 <h3 class="center-align">Edit Recipe</h3>
 
     <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('create_recipe') }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', username=session['user'], recipe_name=recipe_name.recipe_name) }}">
             <div class="card-panel">
                 <!-- recipe name -->
                 <div class="row">
 					<div class="input-field col s12">
 						<i class="fas fa-wine-bottle prefix light-blue-text text-darken-4"></i>
-						<input id="recipe_name" name="recipe_name" type="text" minlength="5"
+						<input id="recipe_name" value="{{ recipe_name.recipe_name }}" name="recipe_name" type="text" minlength="5"
                             maxlength="30"  class="validate" required>
 						<label for="recipe_name">Recipe Name</label>
 					</div>
@@ -21,27 +21,26 @@
                 <div class="row">
 					<div class="input-field col s12">
 						<i class="fas fa-apple-alt prefix light-blue-text text-darken-4"></i>
-						<input id="ingredient1" name="ingredient1" type="text" minlength="5"
-                            maxlength="30"  class="validate" required>
-                    
 
-                        <input id="ingredient2" name="ingredient2" type="text" minlength="5"
+                            {% for ingredient in recipe_name.ingredients %}
+
+                            {% if (ingredient != "") %}
+
+                            {{loop.counter}}
+                        
+                            <input id="ingredient{{ loop.index }}" value="{{ ingredient }}" name="ingredient{{ loop.index }}" type="text" minlength="5"
+                            maxlength="30"  class="validate" >
+
+                            {% else %}
+
+                            {{loop.counter}}
+
+                            <input id="ingredient{{ loop.index }}" name="ingredient{{ loop.index }}" type="text" minlength="5"
                             maxlength="30"  class="hidden validate" >
 
-                        <input id="ingredient3" name="ingredient3" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-
-                        <input id="ingredient4" name="ingredient4" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-
-                        <input id="ingredient5" name="ingredient5" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-
-                        <input id="ingredient6" name="ingredient6" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-
-                        <input id="ingredient7" name="ingredient7" type="text" minlength="5"
-                            maxlength="30"  class="hidden validate" >
+                            {% endif %}
+                        
+                            {% endfor %}<br><br>
 
 						<label for="ingredient1">Ingredients</label>
 					</div>
@@ -58,32 +57,26 @@
                 <div class="row">
 					<div class="input-field col s12">
 						<i class="fas fa-blender prefix light-blue-text text-darken-4"></i>
-						<input id="step1" name="step1" type="text" minlength="5"
-                        maxlength="30"  class="validate" required>
 
+                        {% for step in recipe_name.method %}
                         
-                        <input id="step2" name="step2" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-                        
+                        {% if (step != "") %}
 
-                        
-                        <input id="step3" name="step3" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
+                        {{loop.counter}}
+                    
+                        <input id="step{{ loop.index }}" value="{{ step }}" name="step{{ loop.index }}" type="text" minlength="5"
+                        maxlength="30"  class="validate" >
 
-                        
-                        <input id="step4" name="step4" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
+                        {% else %}
 
-                        
-                        <input id="step5" name="step5" type="text" minlength="5"
+                        {{loop.counter}}
+
+                        <input id="step{{ loop.index }}" name="step{{ loop.index }}" type="text" minlength="5"
                         maxlength="30"  class="hidden validate" >
 
-                        
-                        <input id="step6" name="step6" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
-
-                        <input id="step7" name="step7" type="text" minlength="5"
-                        maxlength="30"  class="hidden validate" >
+                        {% endif %}<br>
+                    
+                        {% endfor %}
 
                        
 						<label for="step1">Method</label>
@@ -97,11 +90,14 @@
     
                 </div>
 
-                <!-- register -->
+                <!-- submit or cancel edit -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Submit Recipe
+                    <a href="{{ url_for('profile', username=username) }}" class="col s6 btn-large red darken-4 text-shadow">
+                        Cancel edit</a>
+                    <button type="submit" class="col s6 btn-large light-blue darken-4 text-shadow">
+                        Submit Edit
                     </button>
+                    
                 </div>
             </div>
         </form>
