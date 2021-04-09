@@ -4,9 +4,12 @@
 
     {% for recipe in recipes %}
     {{ recipe.recipe_name }}<br>
-    {{ recipe.ingredients }}<br>
+    {% for ingredient in ingredients %}
+        {{ ingredient.ingredients }}<br>
+    {% endfor %}
+
     {{ recipe.method }}<br>
-    
+
 {% endfor %}
 
 

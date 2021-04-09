@@ -26,7 +26,7 @@ def landing():
 def recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
-
+    
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
@@ -107,9 +107,9 @@ def create_recipe():
         
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
-            "ingredients": request.form.get("ingredients"),
+            "ingredients": [request.form.get("ingredient1"),request.form.get("ingredient2"),request.form.get("ingredient3"),request.form.get("ingredient4")],
             "method": request.form.get("method"),
-            "created_by": session["user"]
+            "author": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
