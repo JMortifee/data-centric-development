@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    
+    {{ recipe.recipe_name }}<br><br>
+
+    {% for ingredient in recipe.ingredients %}
+
+    {% if (ingredient != "") %}
+
+    <li>{{ ingredient }}</li>
+
+    {% endif %}
+
+    {% endfor %}<br><br>
+
+    {% for step in recipe.method %}
+
+    {% if (step != "") %}
+
+    <li>{{ step }}</li>
+
+    {% endif %}<br>
+
+    {% endfor %}
+
+    
+
+
+
+{% endblock %}

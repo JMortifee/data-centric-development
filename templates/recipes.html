@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-
     {% for recipe in recipes %}
-    {{ recipe.recipe_name }}<br>
-    {% for ingredient in ingredients %}
-        {{ ingredient.ingredients }}<br>
+
+    
+
+    <div class="row">
+        <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
+            {{ recipe.recipe_name }}<br>
+            {{ recipe.author }}<br>
+            <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">go to recipe</button></a>
+            
+        </div>
+    </div>
+
     {% endfor %}
-
-    {{ recipe.method }}<br>
-
-{% endfor %}
-
-
-
 {% endblock %}

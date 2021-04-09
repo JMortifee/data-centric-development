@@ -82,6 +82,7 @@ $(document).ready(function () {
     remove_step();
 
     add_step();
+
 });
 
 

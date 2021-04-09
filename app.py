@@ -24,8 +24,18 @@ def landing():
 
 @app.route("/recipes")
 def recipes():
+
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
+
+@app.route("/recipe/<recipe_name>")
+def recipe(recipe_name):
+
+    recipe = mongo.db.recipes.find_one(
+        {"recipe_name": recipe_name }
+    )
+
+    return render_template("recipe.html", recipe=recipe)
     
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -88,9 +98,13 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    
+    recipes = mongo.db.recipes.find(
+        {"author": username }
+    )
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, recipes=recipes)
     
     return redirect(url_for("login"))
 
@@ -107,8 +121,8 @@ def create_recipe():
         
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
-            "ingredients": [request.form.get("ingredient1"),request.form.get("ingredient2"),request.form.get("ingredient3"),request.form.get("ingredient4")],
-            "method": request.form.get("method"),
+            "ingredients": [request.form.get("ingredient1"),request.form.get("ingredient2"),request.form.get("ingredient3"),request.form.get("ingredient4"),request.form.get("ingredient5"),request.form.get("ingredient6"),request.form.get("ingredient7")],
+            "method": [request.form.get("step1"),request.form.get("step2"),request.form.get("step3"),request.form.get("step4"),request.form.get("step5"),request.form.get("step6"),request.form.get("step7")],
             "author": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
