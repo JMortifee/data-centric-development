@@ -20,7 +20,7 @@
 
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-apple-alt prefix light-blue-text text-darken-4"></i>
+						<i class="fas fa-apple-alt prefix "></i>
 
                             {% for ingredient in recipe_name.ingredients %}
 
@@ -30,6 +30,10 @@
                         
                             <input id="ingredient{{ loop.index }}" value="{{ ingredient }}" name="ingredient{{ loop.index }}" type="text" minlength="5"
                             maxlength="30"  class="validate" >
+
+                            <script>
+                                let ingredient_count = '{{ loop.index }}'
+                            </script>
 
                             {% else %}
 
@@ -46,8 +50,8 @@
 					</div>
                     
                     <div class="col s12 ">
-                        <div class="col m2 s6 offset-m4 add_ingredient btn-large light-blue darken-4 text-shadow">add</div>
-                        <div class="col m2 s6 remove_ingredient btn-large light-blue darken-4 text-shadow">remove</div>
+                        <div class="col m2 s6 offset-m4 add_ingredient btn-large btn">add</div>
+                        <div class="col m2 s6 remove_ingredient btn-large btn">remove</div>
                     </div>
                     
                 </div>
@@ -56,7 +60,7 @@
 
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-blender prefix light-blue-text text-darken-4"></i>
+						<i class="fas fa-blender prefix "></i>
 
                         {% for step in recipe_name.method %}
                         
@@ -66,6 +70,10 @@
                     
                         <input id="step{{ loop.index }}" value="{{ step }}" name="step{{ loop.index }}" type="text" minlength="5"
                         maxlength="30"  class="validate" >
+
+                        <script>
+                            let step_count = '{{ loop.index }}'
+                        </script>
 
                         {% else %}
 
@@ -83,8 +91,8 @@
 					</div>
 
                     <div class="col s12 ">
-                        <div class="col s6 m2 offset-m4 add_step btn-large light-blue darken-4 text-shadow">add</div>
-                        <div class="col s6 m2 remove_step btn-large light-blue darken-4 text-shadow">remove</div>
+                        <div class="col s6 m2 offset-m4 add_step btn-large btn">add</div>
+                        <div class="col s6 m2 remove_step btn-large btn">remove</div>
                     </div>
 
     
@@ -94,7 +102,7 @@
                 <div class="row">
                     <a href="{{ url_for('profile', username=username) }}" class="col s6 btn-large red darken-4 text-shadow">
                         Cancel edit</a>
-                    <button type="submit" class="col s6 btn-large light-blue darken-4 text-shadow">
+                    <button type="submit" class="col s6 btn-large btn">
                         Submit Edit
                     </button>
                     
