@@ -3,11 +3,10 @@
 
 <div class="row">
     <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <h3 class="center-align ">
-                {{ username }}'s Profile
-            </h3>
-        </div>
+        <h3 class="center-align ">
+            {{ username }}'s Profile
+        </h3>
+        
     </div>
 </div>
 
@@ -27,9 +26,9 @@
         <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
             {{ recipe.recipe_name }}<br>
             {{ recipe.author }}<br>
-            <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">go to recipe</button></a>
-            <a href="{{ url_for('edit_recipe', username=session['user'], recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">Edit recipe</button></a>
-            <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">Delete recipe</button></a>
+            <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default hov-1">go to recipe</button></a>
+            <a href="{{ url_for('edit_recipe', username=session['user'], recipe_name=recipe.recipe_name) }}"><button class="btn btn-default hov-2">Edit recipe</button></a>
+            <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default hov-1">Delete recipe</button></a>
             
         </div>
     </div>

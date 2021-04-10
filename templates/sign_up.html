@@ -15,6 +15,20 @@
 						<label for="username">Username</label>
 					</div>
                 </div>
+                <!-- avatar select --> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="far fa-image prefix"></i>
+                        <select class="icons">
+                        <option disabled selected></option>
+                        <option data-icon="{{ url_for('static', filename='images/avatars/lemon.png') }}">Lemon</option>
+                        <option data-icon="{{ url_for('static', filename='images/avatars/strawb.png') }}">Strawberry</option>
+                        <option data-icon="{{ url_for('static', filename='images/avatars/apple.png') }}">Apple</option>
+                        <option data-icon="{{ url_for('static', filename='images/avatars/banana.png') }}">Banana</option>
+                        </select>
+                        <label>Avatar</label>
+                    </div>
+                </div>
                 <!-- email -->
                 <div class="row">
 					<div class="input-field col s12">
@@ -44,9 +58,9 @@
 
     <div class="row">
         <div class="col s12">
-            <p class="center-align">
+            <p class="center-align redirect_message">
                 Already Signed Up?
-                <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In</a>
+                <a href="{{ url_for('login') }}">Log In</a>
             </p>
         </div>
     </div>

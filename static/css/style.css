@@ -2,6 +2,8 @@ html {
     font-family: Oswald;
 }
 
+/* navbar */
+
 .navbar-list {
     float: right;
     margin-right: 0;
@@ -51,6 +53,57 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background-color: black;
 }
 
+.sidenav-trigger i {
+    padding-top: 50px;
+    color: black;
+}
+
+.sidenav .nav-2, .sidenav .nav-1 {
+    font-size: larger;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-1:hover, .sidenav .nav-1:hover {
+    background-color: #e0899a;
+}
+
+.nav-2:hover, .sidenav .nav-2:hover {
+    background-color: #ffb71c;
+}
+
+/* buttons */
+
+.btn {
+    background-color: black;
+}
+
+.fas {
+    color: black;
+}
+
+.btn:hover {
+    background-color: #ffb71c;
+    color: black;
+}
+
+.active::before {
+    color: #e0899a;
+}
+/* create/edit recipe buttons*/
+
+.remove_ingredient:hover, .remove_step:hover, .cancel:hover {
+    background-color: #e0899a;
+}
+/* profile buttons */
+
+.hov-1:hover {
+    background-color: #e0899a;
+}
+
+.hov-2:hover {
+    background-color: #ffb71c;
+}
 
 
 /* sign up page */
@@ -62,37 +115,45 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background: white;
 }
 
+/* sign up/ sign in redirect */
+
+.redirect_message {
+    font-size: large;
+    font-weight: 700;
+}
+
+.redirect_message a {
+    color: #e0899a;
+}
+
+.redirect_message a:hover {
+    color: #ffb71c;
+}
+
+
+
 /* create a recipe page */
 
 .hidden {
     display: none;
 }
 
-main {
-    background-color: white;
+
+/* recipes page */
+
+.recipe-content {
+    margin-top: 30px;
 }
 
-.card-panel {
-    background-color: white;
+.recipe-card {
+    height: 200px;
+    border: 2px solid black;
 }
 
-.btn {
-    background-color: black;
+.recipe-card h3{
+    font-weight: 800;
 }
 
-.fas {
-    color: black;
+.recipe-card a {
+    line-height: 175px;
 }
-
-.btn:hover {
-    background-color: #e0899a;
-}
-
-.fas:hover {
-    color: #e0899a;
-}
-
-.active::before {
-    color: #e0899a;
-}
-
