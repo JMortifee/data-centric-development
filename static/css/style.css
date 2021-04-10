@@ -90,6 +90,37 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .active::before {
     color: #e0899a;
 }
+
+/* get started */
+
+.how-to img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.equip-title {
+    text-align: center;
+}
+
+.equip-1 img{
+    position: relative;
+    margin-left: 0;
+    width: 50vw;
+    height: auto;
+}
+.equip-2 img{
+    position: relative;
+    margin-right: 0;
+    width: 50vw;
+    height: auto;
+}
+
+.step img{
+    width: 100%;
+    height: auto;
+
+}
 /* create/edit recipe buttons*/
 
 .remove_ingredient:hover, .remove_step:hover, .cancel:hover {

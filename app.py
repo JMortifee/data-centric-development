@@ -22,6 +22,10 @@ mongo = PyMongo(app)
 def landing():
     return render_template("landing.html")
 
+@app.route("/get_started")
+def get_started():
+    return render_template("get_started.html")
+
 @app.route("/recipes")
 def recipes():
 

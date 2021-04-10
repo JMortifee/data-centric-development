@@ -1,23 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+    <div class="row container">
 
-    {% for recipe in recipes %}
+        {% for recipe in recipes %}
 
-    
-
-    <div class="row recipe-content">
-        <div class="col s12 m8 offset-m2 recipe-card" method="POST" action="{{ url_for('sign_up') }}">
-            <div class="col s12 m8">
-                <h3>{{ recipe.recipe_name }}</h3>
-                <h4>{{ recipe.author }}</h4>
+        <div class="row recipe-content">
+            <div class="col s12 m8 offset-m2 recipe-card" method="POST" action="{{ url_for('sign_up') }}">
+                <div class="col s12 m8">
+                    <h3>{{ recipe.recipe_name }}</h3>
+                    <h4>{{ recipe.author }}</h4>
+                </div>
+                <div class="col s12 m2">
+                    <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">go to recipe</button></a>
+                </div>
+                
+                
             </div>
-            <div class="col s12 m2">
-                <a href="{{ url_for('recipe', recipe_name=recipe.recipe_name) }}"><button class="btn btn-default">go to recipe</button></a>
-            </div>
-            
-            
         </div>
+        {% endfor %}
     </div>
 
-    {% endfor %}
+    
 {% endblock %}
