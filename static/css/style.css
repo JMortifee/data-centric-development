@@ -334,15 +334,21 @@ footer {
 #copyright {
     background-color: black;
     height: 75px;
+    text-align: center;
 }
   
-#copyright .cp-text{
+#copyright .cp-text-1{
+    color: #ffb71c;
+    font-weight: bold;
+  }
+
+#copyright .cp-text-2{
     color: #e0899a;
     font-weight: bold;
   }
 
-#copyright .cp-text i{
-    color: #ffb71c;
+.fa-copyright{
+    color: #e0899a;
     
   }
 
