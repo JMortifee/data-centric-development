@@ -158,6 +158,15 @@ def edit_recipe(username, recipe_name):
 
     return render_template("edit_recipe.html", username=username, recipe_name=recipe_name)
 
+@app.route("/delete_recipe/<username>/<recipe_name>")
+def delete_recipe(username, recipe_name):
+
+    recipe_name = mongo.db.recipes.remove(
+        {"recipe_name": recipe_name }
+    )
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
 
 
 if __name__ == "__main__":

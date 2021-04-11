@@ -292,6 +292,10 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 /* -----------------------------------profile */
 
+.profile-recipe-card > a{
+    width: 100%;
+    height: 150px;
+}
 
 .profile-recipes a{
     line-height: 50px;
@@ -320,7 +324,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background: white;
 }
 
-/* sign up/ sign in redirect */
+/* ----------sign up/ sign in redirect */
 
 .redirect_message {
     font-size: large;
