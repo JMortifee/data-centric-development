@@ -115,7 +115,6 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .equip-title h2 {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 400;
 }
 
 .equip-1 img{
@@ -136,6 +135,30 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     height: auto;
 
 }
+
+/* -----------------------------------------recipes */
+
+.recipe-1 a, .recipe-2 a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.recipe-1 .recipe-card:hover {
+    background-image: url("../images/pat-yellow-land.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.recipe-2 .recipe-card:hover {
+    background-image: url("../images/pat-pink-land.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* -----------------------------create/edit recipe buttons*/
 
 .remove_ingredient:hover, .remove_step:hover, .cancel:hover {
