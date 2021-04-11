@@ -72,6 +72,8 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background-color: #ffb71c;
 }
 
+
+
 /* -------------------------page heads */
 .page-head {
     border-bottom: 1px solid black;
@@ -95,6 +97,47 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 .active::before {
     color: #e0899a;
+}
+
+/* -------------------------landing page */
+
+.landing-container{
+    margin-top: 40px;
+}
+
+.landing-img img, .landing-text img, .landing-text-mobile img{
+    width: 100%;
+    height: auto;
+}
+
+.landing-text-mobile {
+    display: none;
+}
+
+.landing-button {
+    line-height: 100px;
+    width: 100%;
+    height: 100px;
+}
+
+.landing-button a{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.landing-button:hover {
+    background-color: none;
+    background-image: url("../images/pat-yellow-land.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-button:hover a{
+    color: black;
 }
 
 /* -----------------------------------------get started */
@@ -370,6 +413,12 @@ footer {
     .sidenav-trigger i{
         padding-top: 35px;
     }
+
+    /* bottom buttons */
+
+    .landing-button a{
+        font-size: 10px;
+    }
   }
 
   /* ----------------------------------------------small screen-- */
@@ -381,6 +430,16 @@ footer {
     .logo img{
         width: 75vw;
         height: auto;
+    }
+
+    /* ---------------------landing */
+
+    .landing-text {
+        display: none;
+    }
+
+    .landing-text-mobile {
+        display: inline-block;
     }
 
     /* -------------------get started */
@@ -402,6 +461,12 @@ footer {
 
     .medium {
         display: none;
+    }
+
+    /* bottom buttons */
+
+    .landing-button a{
+        font-size: 20px;
     }
 
 
