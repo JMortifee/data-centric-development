@@ -451,6 +451,15 @@ footer {
     .landing-button a{
         font-size: 10px;
     }
+
+    /* profile recipe buttons */
+
+    .profile-recipes a button{
+        width: 120px;
+        font-size:10px;
+    }
+
+
   }
 
   /* ----------------------------------------------small screen-- */
