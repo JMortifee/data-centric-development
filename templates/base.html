@@ -18,9 +18,6 @@
 	<header>
         <!-- top navbar -->
 		<nav class="nav-extended text-shadow">
-      <div class="nav-top">
-
-      </div>
 			<div class="nav-wrapper">
 				<a href="{{ url_for('landing') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="kujos kombucha logo"></a>
 
@@ -68,7 +65,7 @@
     <footer>
         <div class="row footer-top-bar"></div>
         <div class="row" id="footer-details">
-          <div class="col l5 about">
+          <div class="col s12 m6 l3 offset-l2 about">
             <h4 class="general-sub">About the Developer</h4>
             <p>My name is James Mortifee, I'm a fullstack developer studying with the code institute. I love coding Front
               end
@@ -80,26 +77,25 @@
             </p>
           </div>
     
-          <div class="col l3 offset-l2">
+          <div class="col s12 m6 l3 offset-l2 contact">
             <h4 class="general-sub">Contact</h4>
             <h5>Phone: <span class="contact-info">07432 287146</span></h5>
             <h5>Email: <span class="contact-info">James.mortifee@hotmail.co.uk</span></h5>
             <ul class="list-inline social-links">
-              <li class="list-inline-item justify-content-center"><a href="https://www.facebook.com/james.mortifee"
-                  target="_blank"><i class="fa fa-facebook center-img"></i></a></li>
-              <li class="list-inline-item justify-content-center"><a href="https://www.instagram.com/jammo_morts/"
-                  target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item justify-content-center"><a
-                  href="https://www.linkedin.com/in/james-mortifee-a0a116a4/" target="_blank"><i
-                    class="fa fa-linkedin"></i></a></li>
-              <li class="list-inline-item justify-content-center"><a href="https://github.com/JMortifee/" target="_blank"><i
+              <li class="list-inline-item link-1"><a href="https://www.facebook.com/james.mortifee"
+                  target="_blank"><i class="fab fa-facebook "></i></a></li>
+              <li class="list-inline-item link-2"><a href="https://www.instagram.com/jammo_morts/"
+                  target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item link-1"><a
+                  href="https://www.linkedin.com/in/james-mortifee-a0a116a4/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+              <li class="list-inline-item link-2"><a href="https://github.com/JMortifee/" target="_blank"><i
                     class="fab fa-github"></i></a></li>
             </ul>
           </div>
         </div>
-        <div class="row no-gutters" id="copyright">
-          <div class="col ">
-            <h6 class="text-center"><span class="cp-text">Copyright <i class="far fa-copyright"></i> 2021 </span>
+        <div class="row" id="copyright">
+          <div class="col s6 m4 offset-m4 offset-s4">
+            <h6><span class="cp-text">Copyright <i class="far fa-copyright"></i> 2021 </span>
               <span>Greenstride Ltd</span>
             </h6>
           </div>
