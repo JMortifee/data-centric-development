@@ -261,6 +261,34 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     font-weight: bolder;
 }
 
+/* -----------------------------------recipe */
+
+.recipe-img {
+    width: auto;
+    height: 500px;
+    background-image: url("../images/recipe-kujo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.recipe-img:hover {
+    background-image: url("../images/recipe-wink.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover a{
+    color: black;
+}
 
 /* -----------------------------------profile */
 
@@ -467,6 +495,12 @@ footer {
 
     .landing-button a{
         font-size: 20px;
+    }
+
+    /* -------recipe */
+
+    .ingredients {
+        text-align: center;
     }
 
 

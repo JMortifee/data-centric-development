@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row container">
+
     <div class="row">
         <div class="col s12 m8 offset-m2 page-head">
             <h3 class="center-align ">
@@ -10,47 +12,73 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col s12 m6 ingredients">
+            <h4 class="center-align">Ingredients</h4><br>
+            
+            {% for ingredient in recipe.ingredients %}
 
-    {% for ingredient in recipe.ingredients %}
+            {% if (ingredient != "") %}
 
-    {% if (ingredient != "") %}
+            <h5><li >{{ ingredient }}</li></h5>
 
-    <li>{{ ingredient }}</li>
+            {% endif %}
+            {% endfor %}
 
-    {% endif %}
+        </div>
+        <div class="col s12 m6 center-align recipe-img">
 
-    {% endfor %}<br><br>
+        </div>
+    </div>
 
-    {% for step in recipe.method %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2 page-head">        
+        </div>
+    </div>
 
-    {% if (step != "") %}
+    <div class="row">
+        <div class="col s12 m6 offset-m3 center-align">
 
-    <li>{{ step }}</li>
+            <h4>Method</h4>
 
-    {% endif %}<br>
+            {% for step in recipe.method %}
 
-    {% endfor %}
+            {% if (step != "") %}
+            {{ loop.counter }}
+
+            <h5>step {{ loop.index }}. {{ step }}</h5><br>
+
+            {% endif %}
+
+            {% endfor %}
+
+
+
+        </div>
+        
+    </div>
 
     <!-- return to profile/ recipes -->
 
     {% if session['user'] == recipe.author %}
 
     <div class="row">
-        <a href="{{ url_for('profile', username=session['user']) }}" class="col s6 btn-large btn">
-            Return to Profile</a>
+        <div class="col s6 offset-s3 m4 offset-m4 l2 offset-l5 center-align btn recipe-btn">
+            <a href="{{ url_for('profile', username=session['user']) }}">Return to Profile</a>
+            
+        </div>
     </div>
 
     {% else %}
 
     <div class="row">
-        <a href="{{ url_for('recipes') }}" class="col s6 btn-large btn">
-            Return to Recipes</a>
+        <div class="col s8 offset-s2 m6 offset-m3 center-align btn recipe-btn">
+            <a href="{{ url_for('recipes') }}">Return to Profile</a>
+            
+        </div>
     </div>
 
     {% endif %}
 
-    
-
-
-
+</div>
 {% endblock %}
