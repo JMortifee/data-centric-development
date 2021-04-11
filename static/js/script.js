@@ -83,14 +83,4 @@ $(document).ready(function () {
 
     add_step();
 
-    // avatar selector init
-
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-    })
-
-    // Or with jQuery
-
-    $(document).ready(function(){
-        $('select').formSelect();
-    });
+});

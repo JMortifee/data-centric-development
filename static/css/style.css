@@ -144,6 +144,18 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 }
 
+.recipe-1 .recipe-card h3 {
+    color: #ffb71c;
+
+}
+
+.recipe-2 .recipe-card h3 {
+    color: #e0899a;
+
+}
+
+
+
 .recipe-1 .recipe-card:hover {
     background-image: url("../images/pat-yellow-land.jpg");
     background-position: center;
@@ -152,12 +164,38 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 }
 
+
 .recipe-2 .recipe-card:hover {
     background-image: url("../images/pat-pink-land.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.recipe-1 .recipe-card:hover h3, .recipe-2 .recipe-card:hover h3{
+    color: black;
+    font-size: 1000;
+}
+
+.recipe-1 .recipe-card:hover p, .recipe-2 .recipe-card:hover p{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.recipe-1 .recipe-card:hover p span, .recipe-2 .recipe-card:hover p span{
+    font-size: x-large;
+    font-weight: 1000;
+}
+
+.recipe-card p {
+    font-size: x-large;
+}
+
+.recipe-card p span{
+    font-weight: bolder;
+}
+
+
 
 /* -----------------------------create/edit recipe buttons*/
 
