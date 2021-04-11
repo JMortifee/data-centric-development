@@ -46,6 +46,11 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     color: black;
     text-align: center;
 }
+/* .nav-top {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+} */
 
 .nav-bottom, .footer-top-bar{
     width: 100%;

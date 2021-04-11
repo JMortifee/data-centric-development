@@ -18,8 +18,14 @@
 	<header>
         <!-- top navbar -->
 		<nav class="nav-extended text-shadow">
+      <div class="nav-top">
+
+      </div>
 			<div class="nav-wrapper">
 				<a href="{{ url_for('landing') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="kujos kombucha logo"></a>
+
+        <!-- <a href="{{ url_for('landing') }}" class="logo-center"><img src="{{ url_for('static', filename='images/kujo.png') }}" alt="drawing of kujo"></a> -->
+        
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
                     <li><a class="nav-1" href="{{ url_for('get_started') }}">Get Started</a></li>
