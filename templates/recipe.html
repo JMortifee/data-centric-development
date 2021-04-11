@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="row">
+        <div class="col s12 m8 offset-m2 page-head">
+            <h3 class="center-align ">
+                {{ recipe.recipe_name }}
+            </h3>
+            
+        </div>
+    </div>
 
-    
-    {{ recipe.recipe_name }}<br><br>
 
     {% for ingredient in recipe.ingredients %}
 

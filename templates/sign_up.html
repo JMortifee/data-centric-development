@@ -3,7 +3,14 @@
 
     <div class="container">
 
-        <h3 class="center-align">Register</h3>
+        <div class="row">
+            <div class="col s12 m8 offset-m2 page-head">
+                <h3 class="center-align ">
+                    Sign Up
+                </h3>
+                
+            </div>
+        </div>
 
         <div class="row">
             <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
@@ -15,20 +22,6 @@
                             <input id="username" name="username" type="text" minlength="5"
                                 maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                             <label for="username">Username</label>
-                        </div>
-                    </div>
-                    <!-- avatar select --> 
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="far fa-image prefix"></i>
-                            <select class="icons" name="avatar">
-                            <option disabled selected></option>
-                            <option id="lemon" data-icon="{{ url_for('static', filename='images/avatars/lemon.png') }}">Lemon</option>
-                            <option id="strawb" data-icon="{{ url_for('static', filename='images/avatars/strawb.png') }}">Strawberry</option>
-                            <option id="apple" data-icon="{{ url_for('static', filename='images/avatars/apple.png') }}">Apple</option>
-                            <option id="banana" data-icon="{{ url_for('static', filename='images/avatars/banana.png') }}">Banana</option>
-                            </select>
-                            <label>Avatar</label>
                         </div>
                     </div>
                     <!-- email -->

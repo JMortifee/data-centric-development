@@ -72,6 +72,12 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background-color: #ffb71c;
 }
 
+/* -------------------------page heads */
+.page-head {
+    border-bottom: 1px solid black;
+}
+
+
 /* ------------------------------------------buttons */
 
 .btn {
@@ -138,6 +144,24 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 /* -----------------------------------------recipes */
 
+
+.recipe-content {
+    margin-top: 30px;
+}
+
+.recipe-card {
+    height: 200px;
+    border: 2px solid black;
+}
+
+.recipe-card h3{
+    font-weight: 800;
+}
+
+.recipe-card a {
+    line-height: 175px;
+}
+
 .recipe-1 a, .recipe-2 a {
     text-decoration: none;
     color: black;
@@ -154,22 +178,21 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 }
 
-
-
 .recipe-1 .recipe-card:hover {
     background-image: url("../images/pat-yellow-land.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 6px solid black;
 
 }
-
 
 .recipe-2 .recipe-card:hover {
     background-image: url("../images/pat-pink-land.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 6px solid black;
 }
 
 .recipe-1 .recipe-card:hover h3, .recipe-2 .recipe-card:hover h3{
@@ -196,13 +219,17 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 }
 
 
+/* -----------------------------------profile */
 
-/* -----------------------------create/edit recipe buttons*/
 
-.remove_ingredient:hover, .remove_step:hover, .cancel:hover {
-    background-color: #e0899a;
+.profile-recipes a{
+    line-height: 50px;
 }
-/* -----------------------------------profile buttons */
+
+.profile-recipes a button{
+    width: 150px;
+}
+
 
 .hov-1:hover {
     background-color: #e0899a;
@@ -222,7 +249,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     background: white;
 }
 
-/* -----------------------------------sign up/ sign in redirect */
+/* sign up/ sign in redirect */
 
 .redirect_message {
     font-size: large;
@@ -245,31 +272,18 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     display: none;
 }
 
+/* create/edit recipe buttons*/
 
-/* ---------------------------------------recipes page */
+.remove_ingredient:hover, .remove_step:hover, .cancel:hover {
+    background-color: #e0899a;
+}
+
+
+/* -------------------------------------------------footer */
 
 .footer-top-bar {
     margin-top: 200px;
 }
-
-.recipe-content {
-    margin-top: 30px;
-}
-
-.recipe-card {
-    height: 200px;
-    border: 2px solid black;
-}
-
-.recipe-card h3{
-    font-weight: 800;
-}
-
-.recipe-card a {
-    line-height: 175px;
-}
-
-/* -------------------------------------------------footer */
 
 footer {
     width: 100%;
@@ -277,6 +291,7 @@ footer {
   
 .general-sub {
     padding: 20px 0;
+    font-weight: bolder;
   }
   
 .contact-info {
@@ -301,7 +316,7 @@ footer {
     line-height: 10px;
     text-align: center;
     color: #fafafa;
-    background: #707070;
+    background: black;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
@@ -315,11 +330,20 @@ footer {
 .link-2 a i:hover {  
     background: 	#e0899a;
   }
-  
+
 #copyright {
-    
     background-color: black;
     height: 75px;
+}
+  
+#copyright .cp-text{
+    color: #e0899a;
+    font-weight: bold;
+  }
+
+#copyright .cp-text i{
+    color: #ffb71c;
+    
   }
 
 #copyright div {
@@ -330,7 +354,7 @@ footer {
 
   
 .cp-text {
-    color: #99a3a6;
+    color: black;
   }
 
   /* ----------------------------------------------mobile screen-- */
