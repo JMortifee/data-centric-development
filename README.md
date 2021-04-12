@@ -143,6 +143,16 @@ I then roped some family and friends into creating an account and some recipes a
 ### Responsivity
 Because I used Materialize, it's built in, mobile first, design allowed me to create a site that only needed a few adjustments for the site to work well on mobile and tablet devices. 
 
+## Deployment <a name="deployment"></a>
+
+I used heroku to deploy my project as git hub pages who I had previously used only allows for static sites.
+
+Deploying to heroku was very simple and painless I linked my git hub repository to the app on heroku so that it would automatically update any changes I commited.
+
+To deploy I needed a requirements.txt file so that heroku knew what libararies the project needed to run. As well as a procfile to specify the type of app and the app file name and language.
+
+After doing this I pressed deploy and the app was deployed to the site.
+
 ## Credits <a name="credits"></a>
 
 ##### Home
